@@ -1,0 +1,51 @@
+.newsLetterContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 70px 20px 20px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 20px 80px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  width: auto;
+}
+
+.text {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.28px;
+  color: rgb(33, 33, 33);
+}
+
+.subtext {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.emailContainer {
+  display: flex;
+  align-items: center;
+}
+
+.notify {
+  box-sizing: border-box;
+  background: rgb(238, 42, 36);
+  border-radius: 6px;
+  height: 48px;
+  padding: 12px 38px;
+  width: auto;
+  margin-left: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border: none;
+  outline: none;
+}

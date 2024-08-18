@@ -1,0 +1,11 @@
+.bannerContainer {
+  margin: 32px 0;
+  padding: 0 80px;
+}
+
+.bannerContainer__image {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  overflow: hidden;
+}

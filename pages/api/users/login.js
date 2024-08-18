@@ -1,0 +1,65 @@
+import User from '@/models/User';
+import Joi from 'joi';
+import constants from '@/helpers/constants';
+
+export default async function loginHandler(req, res) {
+    if (req.method !== 'POST') {
+        res.status(405).json({ message: 'Method not allowed' });
+        return
+    }
+
+    try {
+        const body = req.body;
+        let { email, password, role } = body;
+
+        let schema = Joi.object().keys({
+            email: Joi.string().email().required(),
+            password: Joi.string().required(),
+            role: Joi.string().valid('Customer', 'HotelAdmin').required()
+        }).options({ allowUnknown: true });
+
+        const { error } = schema.validate(body);
+
+        if (error) {
+            throw new Error(error.details[0].message);
+        }
+
+        switch (role) {
+            case 'Customer':
+                role = constants.USER_TYPE.CUSTOMER;
+                break;
+            case 'HotelAdmin':
+                role = constants.USER_TYPE.HOTEL_ADMIN;
+                break;
+            default:
+                throw new Error("Invalid Role");
+        }
+
+        const user = await User.findOne({ email, role });
+        if (!user) {
+            throw new Error("Invalid Email/Password");
+        }
+
+        const isPasswordValid = await user.verifyPassword(password);
+        if (!isPasswordValid) {
+            throw new Error("Invalid Email/Password");
+        }
+
+        const data = {
+            name: user.name,
+            email: user.email,
+            user_id: user._id
+        };
+
+        return res.json({
+            flag: constants.RESPONSE_FLAGS.ACTION_COMPLETE,
+            message: "Login Successful",
+            user: data
+        });
+    } catch (error) {
+        return res.json({
+            flag: constants.RESPONSE_FLAGS.ACTION_FAILED,
+            error: error.message
+        });
+    }
+}
