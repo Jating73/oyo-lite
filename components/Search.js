@@ -28,7 +28,7 @@ export default function Search() {
                         <div className={classes.searchWrapper__cityPicker}>
                             <Autocomplete
                                 disablePortal
-                                sx={{ width: 300 }}
+                                fullWidth
                                 renderInput={(params) => <TextField {...params} label="Search City" />}
                                 options={topCities}
                             />

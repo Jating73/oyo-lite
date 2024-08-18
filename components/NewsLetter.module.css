@@ -13,6 +13,24 @@
   width: auto;
 }
 
+.dealContainer {
+  display: flex;
+}
+
+.dealIcon {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin-right: 12px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .text {
   font-weight: bold;
   font-size: 20px;
@@ -48,4 +66,5 @@
   text-align: center;
   border: none;
   outline: none;
+  cursor: pointer;
 }

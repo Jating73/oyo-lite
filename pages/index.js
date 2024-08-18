@@ -8,6 +8,7 @@ import CityExplorer from "@/components/CityExplorer";
 import Search from "@/components/Search";
 import Banner from "@/components/Banner";
 import NewsLetter from "@/components/NewsLetter";
+import Footer from "@/components/Footer";
 
 
 export default function HomePage() {
@@ -22,9 +23,10 @@ export default function HomePage() {
       <Header />
       <CityExplorer />
       <Search />
-      <Banner imageUrl={"https://assets.oyoroomscdn.com/cmsMedia/ed806cf5-6ed2-48f7-a1be-4d72f7d9b586.jpeg"} />
-      <Banner imageUrl={"https://assets.oyoroomscdn.com/cmsMedia/b4462e5e-fd6b-44e4-99d7-fc83767ed892.png"} />
+      <Banner imageUrl={"https://assets.oyoroomscdn.com/cmsMedia/ed806cf5-6ed2-48f7-a1be-4d72f7d9b586.jpeg"} objectType="contain" />
+      <Banner imageUrl={"https://assets.oyoroomscdn.com/cmsMedia/b4462e5e-fd6b-44e4-99d7-fc83767ed892.png"} objectType="contain" />
       <NewsLetter />
+      <Footer />
     </Fragment>
   );
 }

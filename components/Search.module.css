@@ -43,6 +43,7 @@
 }
 
 .searchWrapper__cityPicker {
+  width: 100%;
 }
 
 .searchWrapper__datePicker {

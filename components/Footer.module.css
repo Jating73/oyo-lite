@@ -1,0 +1,88 @@
+.footer__wrapper {
+    background-color: #6d787d;
+    padding: 20px 80px;
+    color: #fff;
+}
+
+.footer__main {}
+
+.footer__app {}
+
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer__app__container {
+    margin: 0;
+    padding: 30px 80px !important;
+    border-top: 1px solid hsla(0, 0%, 100%, .5);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__hotels {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 80px;
+    padding: 32px 0;
+    border-top: 1px solid hsla(0, 0%, 100%, .5);
+}
+
+.footer__hotels__heading {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    margin-bottom: 10px;
+}
+
+.footer__hotels__grid,
+.footer__app__primaryLinks,
+.footer__app__secondaryLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.city,
+.link {
+    flex: 1;
+    text-align: left;
+}
+
+.link {
+    text-wrap: nowrap;
+}
+
+.city a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer__social {}
+
+.footer__social__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin: 0 80px;
+    border-top: 1px solid hsla(0, 0%, 100%, .5);
+}
+
+.social_icons {
+    display: flex;
+    gap: 15px;
+}
+
+.copyright {
+    font-size: 12px;
+    font-weight: 700;
+    color: hsla(0, 0%, 100%, .7);
+}
