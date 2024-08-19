@@ -1,0 +1,152 @@
+.hotelCardWrapper {
+    width: 100%;
+}
+
+.hotelCard {
+    background-color: #fff;
+    padding: 0 !important;
+    margin-top: 40px !important;
+    align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+
+.hotelCard__imageWrapper {
+    min-height: 255px;
+}
+
+.hotelCard__descriptionWrapper {
+    width: calc(100% - 460px);
+}
+
+.hotelCard__description {
+    padding: 0 0 0 16px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 100%;
+}
+
+.hotelCard__content {
+    width: 100%;
+}
+
+.contentWrapper {}
+
+.ratingWrapper {}
+
+.amenityWrapper {
+    margin-top: 6px;
+    display: flex;
+}
+
+.amenity {
+    display: flex;
+    align-items: center;
+    max-width: 40%;
+    padding-right: 24px;
+    flex-direction: column;
+}
+
+.amenity__icon {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.amenity__text {
+    font-size: 14px;
+    line-height: 28px;
+    color: #222;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+/* Book Now Button */
+.hotelCard__priceButton {
+    width: 100%;
+}
+
+.hotelCard__priceButtonWrapper {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+}
+
+.priceNumber {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.price__final {
+    color: #222;
+    font-size: 20px;
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+.price__striked {
+    font-size: 10px;
+    color: #6d787d;
+    margin-right: 8px;
+    text-decoration: line-through;
+}
+
+.price__discount {
+    font-size: 10px;
+    font-weight: 600;
+    color: #f5a623;
+    line-height: 25px;
+}
+
+.pricePerNight {
+    font-weight: 400;
+    line-height: 1em;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #6d787d;
+}
+
+.priceGroup {
+    width: 41.66667%;
+}
+
+
+.btnGroup {
+    width: 58.33333%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detailsBtn {
+    background-color: #fff;
+    color: #222;
+    border-radius: 2px !important;
+    border: 1px solid #222;
+}
+
+.bookBtn {
+    margin-left: 16px !important;
+    background-color: #1ab64f;
+    color: #fff;
+    border-radius: 2px !important;
+    border: 1px solid #1ab64f;
+}
+
+.detailsBtn,
+.bookBtn {
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 1.25em;
+    text-align: center;
+    outline: none;
+    padding: 8px 16px !important;
+    width: auto !important;
+    align-self: flex-end;
+    white-space: nowrap;
+}

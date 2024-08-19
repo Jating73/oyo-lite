@@ -1,0 +1,13 @@
+.filter__item {
+    padding: 24px 0;
+    border-bottom: 1px solid #e3e3e3;
+    padding-top: 0;
+}
+
+.filter__item h4 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 4px auto 16px;
+    color: #222;
+}

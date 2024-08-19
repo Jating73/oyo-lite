@@ -1,0 +1,7 @@
+.list__wrapper {
+    padding: 0;
+    margin: 0 32px;
+    align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+}

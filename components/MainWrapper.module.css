@@ -1,0 +1,71 @@
+.list__content {
+    width: 78%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.list__contentWrapper {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+}
+
+.list__contentHeader {
+    padding: 20px 32px 0;
+}
+
+.list__breadCrumbs a {
+    text-decoration: none;
+    color: rgb(42, 147, 222);
+}
+
+.list__heading {
+    display: flex;
+    font-size: 24px;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.list__heading>span {
+    flex: 1;
+}
+
+.list__heading h1 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #333;
+}
+
+.mapToggle {
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.mapToggle>span:first-child {
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
+    padding-right: 10px;
+}
+
+.list__divider {
+    height: 1px;
+    background-color: #eee;
+    margin-top: 20px;
+}
+
+.list__banner {
+    display: flex;
+    margin: 20px 0 0;
+    width: 83%;
+}
+
+.banner__section {
+    flex: 1 1 50%;
+    max-width: 40%;
+    margin-right: 15px;
+}

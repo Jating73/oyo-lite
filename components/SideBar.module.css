@@ -1,0 +1,48 @@
+.sidebar {
+    padding-top: 16px;
+    border-right: 1px solid #e1e2e3;
+    border-radius: 4px;
+    background-color: #fff;
+    height: auto;
+    position: sticky;
+    top: 70px;
+    vertical-align: top;
+    width: 22%;
+    display: inline-block;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+}
+
+.sidebar__header {
+    padding: 0 24px;
+    display: flex;
+    align-items: baseline;
+    flex: 1;
+    justify-content: space-between;
+    max-height: 70px;
+}
+
+.sidebar__button {
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ee2a24;
+    text-align: right;
+    cursor: pointer;
+    border: none;
+}
+
+.sidebar__heading {
+    font-size: 26px;
+    font-weight: 700;
+    font-stretch: normal;
+    line-height: 1.23;
+    color: #333;
+    margin-top: 16px;
+}
+
+.sidebar__filter {
+    display: flex;
+    flex-direction: column;
+}
