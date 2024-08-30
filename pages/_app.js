@@ -1,5 +1,9 @@
 import "@/styles/globals.css";
 
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css'; // Import the CSS
+config.autoAddCss = false; // Disable automatic CSS addition
+
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment'

@@ -9,7 +9,7 @@
     vertical-align: top;
     width: 22%;
     display: inline-block;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 0px);
     overflow-y: scroll;
 }
 

@@ -6,8 +6,8 @@ export default function CheckBoxGroup({ data, heading }) {
         <Fragment>
             <h4>{heading}</h4>
             <FormGroup>
-                {data.map((d) => {
-                    return <FormControlLabel control={<Checkbox />} label={d} />
+                {data.map((d, index) => {
+                    return <FormControlLabel key={index} control={<Checkbox />} label={d} />
                 })}
             </FormGroup>
         </Fragment>
