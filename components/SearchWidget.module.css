@@ -1,0 +1,191 @@
+/* Search Widget for Main Page */
+.searchWrapper__widgetContainer {
+    border-radius: 4px;
+    position: relative;
+}
+
+.searchWrapper__widget {
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0;
+    display: flex;
+}
+
+.searchWrapper__cityPicker {
+    width: 100%;
+}
+
+.searchWrapper__datePicker {
+    display: flex;
+    width: 100%;
+}
+
+.searchWrapper__buttonContainer {
+    width: 40%;
+}
+
+.searchWrapper__button {
+    background: #1ab64f;
+    border: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    outline: none;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 0;
+    width: 100%;
+    transition: 0.2s;
+    user-select: none;
+    height: 100%;
+    cursor: pointer;
+}
+
+.promoCard {
+    border-right: 1px solid #eee;
+    padding: 0 10px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.promoCard__card {
+    border-radius: 4px;
+    padding: 8px 8px 7px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.promoCard__iconWrapper {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    box-sizing: border-box;
+}
+
+.promoCard__contentWrapper {
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-left: 7px;
+    white-space: nowrap;
+}
+
+.promoCard__text {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 2px;
+}
+
+.promoCard__subtext {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+
+/* Search Widget for Navigation */
+.searchWrapperNavigation__widgetConatiner {
+    width: calc(100% - 120px);
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    flex-wrap: nowrap;
+}
+
+.searchWrapperNavigation__widget {
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0;
+    display: flex;
+    width: 100%;
+}
+
+.searchWrapperNavigation__cityPicker {
+    width: 39%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.searchWrapperNavigation__datePicker {
+    display: flex;
+    width: calc(50% - 125px);
+}
+
+.searchWrapperNavigation__buttonContainer {
+    width: 160px;
+    margin-left: 5px;
+}
+
+.searchWrapperNavigation__button {
+    background: #1ab64f;
+    border: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    outline: none;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 0;
+    width: 100%;
+    transition: 0.2s;
+    user-select: none;
+    height: 100%;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.authButton {
+    height: 100%;
+    padding: 0 20px 0 4px;
+    margin-left: 12px;
+    border: 1px solid transparent;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authButton__Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+}
+
+.authButton__iconWrapper {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+}
+
+.authButton__contentWrapper {
+    display: inline-block;
+    width: calc(100% - 52px);
+    margin-left: 4px;
+    white-space: nowrap;
+}
+
+.authButton__text {
+    color: #222;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}

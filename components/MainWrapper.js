@@ -6,15 +6,15 @@ import { useState } from 'react';
 import CouponWrapper from './CouponWrapper';
 import HotelListWrapper from './HotelListWrapper';
 
-export default function MainWrapper({ city, totalHotels = 100 }) {
+export default function MainWrapper({ city, totalHotels = 100, hotels = [] }) {
 
     const [type, setType] = useState('popularity')
 
     const breadcrumbs = [
-        <Link href={'/'}>
+        <Link href={'/'} key="home">
             Home
         </Link>,
-        <Typography key="3" color="text.primary">
+        <Typography key="hotels-in-city" color="text.primary">
             Hotels in {city}
         </Typography>
     ];
@@ -36,7 +36,7 @@ export default function MainWrapper({ city, totalHotels = 100 }) {
                     </div>
                     <div className={classes.list__heading}>
                         <span>
-                            <h1>Hotels in Delhi ({totalHotels} OYOs)</h1>
+                            <h1>Hotels in {city} ({totalHotels} OYOs)</h1>
                         </span>
                         <div className={classes.mapToggle}>
                             <span>Map View</span>
@@ -70,7 +70,7 @@ export default function MainWrapper({ city, totalHotels = 100 }) {
                         </div>
                     </div>
                 </div>
-                <HotelListWrapper />
+                <HotelListWrapper hotels={hotels} />
             </div>
         </section>
     )

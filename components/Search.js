@@ -4,6 +4,7 @@ import classes from './Search.module.css';
 import { DatePicker } from '@mui/x-date-pickers';
 import moment from 'moment';
 import { Autocomplete, TextField } from '@mui/material';
+import SearchWidget from './SearchWidget';
 
 export default function Search() {
 
@@ -23,25 +24,7 @@ export default function Search() {
         <div className={classes.searchContainer}>
             <div className={classes.searchWrapper}>
                 <h1 className={classes.searchWrapper__tagline}>Over 174,000+ hotels and homes across 35+ countries</h1>
-                <div className={classes.searchWrapper__widgetContainer}>
-                    <div className={classes.searchWrapper__widget}>
-                        <div className={classes.searchWrapper__cityPicker}>
-                            <Autocomplete
-                                disablePortal
-                                fullWidth
-                                renderInput={(params) => <TextField {...params} label="Search City" />}
-                                options={topCities}
-                            />
-                        </div>
-                        <div className={classes.searchWrapper__datePicker}>
-                            <DatePicker value={checkIn} onChange={handleCheckInChange} minDate={moment()} disablePast />
-                            <DatePicker value={checkOut} onChange={handleCheckOutChange} minDate={checkIn} />
-                        </div>
-                        <div className={classes.searchWrapper__buttonContainer}>
-                            <button className={classes.searchWrapper__button}>Search</button>
-                        </div>
-                    </div>
-                </div>
+                <SearchWidget />
             </div>
         </div>
     )

@@ -1,3 +1,16 @@
+.headerSticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  height: 70px;
+}
+
 .headerWrapper {
   width: 100%;
 }
@@ -25,6 +38,14 @@
   align-items: center;
 }
 
+.headerWrapper__leftSearch {
+  display: flex;
+  width: 10% !important;
+  height: 62px;
+  align-items: center;
+  justify-content: center;
+}
+
 .headerWrapper__right {
   justify-content: flex-end;
   padding-right: 50px;
@@ -32,6 +53,24 @@
   width: 50% !important;
   height: 100%;
   align-items: center;
+}
+
+.headerWrapper__rightSearch {
+  display: flex;
+  width: 90% !important;
+  height: 62px;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.searchWidgetWrapper {
+  width: calc(100% - 120px);
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  flex-wrap: nowrap;
 }
 
 .promoCard {

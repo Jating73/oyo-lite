@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Super OYO 7135 Hotel Blue Sapphire Delhi",
+    "address": "Near Karol Bagh Metro Station, Delhi",
+    "distance": "1.0",
+    "rating": 4.9,
+    "total_rating": 445,
+    "summary": "Fabulous",
+    "amenities": ["Free Wifi", "Power backup", "TV", "AC", "Geyser", "Elevator", "Card Payment", "CCTV Cameras", "Dining area"],
+    "actual_price": 2669,
+    "final_price": 600,
+    "discount": 71,
+    "tax": 148,
+    "images": [
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/nyrlxclumosi.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/qeuxujfdnbss.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/jpbedhfsgfqt.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/kbdeqlwxvlhc.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Super OYO 7135 Hotel Blue Sapphire Delhi",
+    "address": "Near Karol Bagh Metro Station, Delhi",
+    "distance": "1.0",
+    "rating": 4.9,
+    "total_rating": 445,
+    "summary": "Fabulous",
+    "amenities": ["Free Wifi", "Power backup", "TV", "AC", "Geyser", "Elevator", "Card Payment", "CCTV Cameras", "Dining area"],
+    "actual_price": 2669,
+    "final_price": 600,
+    "discount": 71,
+    "tax": 148,
+    "images": [
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/nyrlxclumosi.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/qeuxujfdnbss.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/jpbedhfsgfqt.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/kbdeqlwxvlhc.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Super OYO 7135 Hotel Blue Sapphire Delhi",
+    "address": "Near Karol Bagh Metro Station, Delhi",
+    "distance": "1.0",
+    "rating": 4.9,
+    "total_rating": 445,
+    "summary": "Fabulous",
+    "amenities": ["Free Wifi", "Power backup", "TV", "AC", "Geyser", "Elevator", "Card Payment", "CCTV Cameras", "Dining area"],
+    "actual_price": 2669,
+    "final_price": 600,
+    "discount": 71,
+    "tax": 148,
+    "images": [
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/nyrlxclumosi.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/qeuxujfdnbss.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/jpbedhfsgfqt.jpg",
+      "https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/kbdeqlwxvlhc.jpg"
+    ]
+  }
+]

@@ -5,10 +5,11 @@ import { Fragment } from "react"
 import MainWrapper from "@/components/MainWrapper";
 import SideBar from "@/components/SideBar";
 
-export default function CityHotelsPage(props) {
+import { getHotelList } from "@/helpers/hotel-util";
+import Header from "@/components/Header";
 
-    const router = useRouter();
-    const { city } = router.query;
+export default function CityHotelsPage(props) {
+    const { city, hotels, showSearchBar } = props;
 
     const pageTitle = `Hotels in ${city} - Find premium OYO Rooms in your budget`;
     const metaDescription = `Find budget hotels in ${city} on OYO. Enjoy comfort, convenience, and great value for your money. Rooms starting at ₹452.`
@@ -21,21 +22,24 @@ export default function CityHotelsPage(props) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Header showSearchBar={showSearchBar} />
             <SideBar />
-            <MainWrapper city={city} />
+            <MainWrapper city={city} hotels={hotels} />
         </Fragment>
     )
 }
 
-// export function getServerSideProps(context) {
+export async function getServerSideProps(context) {
 
-//     const { params } = context;
+    const { city } = context.params;
 
-//     const cityName = params.slug;
+    const hotels = await getHotelList(city)
 
-//     return {
-//         props: {
-
-//         }
-//     }
-// }
+    return {
+        props: {
+            hotels: hotels,
+            city: city,
+            showSearchBar: true
+        }
+    }
+}

@@ -17,6 +17,16 @@
     max-width: 50%
 }
 
+.swipperMainWrapper {
+    padding: 0;
+    justify-content: "flex-end";
+    align-items: "center";
+}
+
+.swiperContainer {
+    max-height: 275px;
+}
+
 .hotelCard__descriptionWrapper {
     /* min-height: 255px; */
     width: calc(100% - 50%);
@@ -58,6 +68,14 @@
 
 .ratingWrapper {}
 
+.hotelAddress__viewMap {
+    white-space: nowrap;
+}
+
+.hotelAddress__locationIcon svg {
+    color: #e51f1f;
+}
+
 .hotelRating {
     cursor: pointer;
     background-color: #0f943c;
@@ -85,7 +103,9 @@
     color: #222;
 }
 
-.hotelRating__dot {
+.hotelRating__dot,
+.hotelAddress__dot,
+.hotelAddress__distanceText {
     margin: 0 4px;
     color: #222;
 }
@@ -103,7 +123,7 @@
 }
 
 .amenity__icon {
-    margin-top: 0 auto;
+    margin-top: 10px;
     margin-right: 5px;
     width: 18px;
     height: 18px;

@@ -1,10 +1,14 @@
 import HotelItem from './HotelItem';
 import classes from './HotelListWrapper.module.css';
 
-export default function HotelListWrapper() {
+export default function HotelListWrapper({ hotels = [] }) {
     return (
         <div className={classes.list__wrapper}>
-            <HotelItem />
+            {hotels.map((hotel) => {
+                return (
+                    <HotelItem hotel={hotel} key={hotel.id} />
+                )
+            })}
         </div>
     )
 }

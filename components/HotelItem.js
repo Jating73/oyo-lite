@@ -1,7 +1,7 @@
 import { Dining, Elevator, NetworkWifi, Sanitizer } from '@mui/icons-material'
 import StarIcon from '@mui/icons-material/Star';
 import classes from './HotelItem.module.css'
-import { faWifi, faUtensils, faCreditCard, faCarBattery, faDisplay } from '@fortawesome/free-solid-svg-icons';
+import { faWifi, faUtensils, faCreditCard, faCarBattery, faDisplay, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -14,40 +14,28 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules';
 import Link from 'next/link';
 
-export default function HotelItem({ hotelId }) {
-
-    const images = [
-        'https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/nyrlxclumosi.jpg',
-        'https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/qeuxujfdnbss.jpg',
-        'https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/jpbedhfsgfqt.jpg',
-        'https://images.oyoroomscdn.com/uploads/hotel_image/11959/medium/kbdeqlwxvlhc.jpg',
-    ];
+export default function HotelItem({ hotel }) {
 
     return (
         <div className={classes.hotelCardWrapper}>
             <div className={classes.hotelCard}>
                 <div className={classes.hotelCard__imageWrapper}>
-                    <div style={{
-                        padding: "0",
-                        justifyContent: "flex-end",
-                        alignItems: "center",
-
-                    }}>
-
+                    <div className={classes.swipperMainWrapper}>
+                        <Swiper
+                            modules={[Navigation]}
+                            spaceBetween={30}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            className={classes.swiperContainer}
+                        >
+                            {hotel.images.map((src, index) => (
+                                <SwiperSlide key={index}>
+                                    <img src={src} alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
-                    <Swiper
-                        modules={[Navigation]}
-                        spaceBetween={30}
-                        slidesPerView={1}
-                        navigation
-                        pagination={{ clickable: true }}
-                    >
-                        {images.map((src, index) => (
-                            <SwiperSlide key={index}>
-                                <img src={src} alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
                 </div>
 
                 <div className={classes.hotelCard__descriptionWrapper}>
@@ -56,15 +44,17 @@ export default function HotelItem({ hotelId }) {
                         <div className={classes.hotelCard__content}>
                             <div className={classes.contentWrapper}>
                                 <div>
-                                    <Link href={`/${hotelId}`}>
-                                        <h3 className={classes.hotelName}>Super OYO 7135 Hotel Blue Sapphire Delhi</h3>
+                                    <Link href={`/${hotel.id}`}>
+                                        <h3 className={classes.hotelName}>{hotel.name}</h3>
                                     </Link>
                                     <div className={classes.hotelAddress}>
-                                        <span>Near Karol Bagh Metro Station, Delhi</span>
-                                        <span>.</span>
-                                        <span>
-                                            <span></span>
-                                            <span>1.0 km</span>
+                                        <span>{hotel.address}</span>
+                                        <span className={classes.hotelAddress__dot}>.</span>
+                                        <span className={classes.hotelAddress__viewMap}>
+                                            <span className={classes.hotelAddress__locationIcon}>
+                                                <FontAwesomeIcon icon={faLocationDot} />
+                                            </span>
+                                            <span className={classes.hotelAddress__distanceText}>{hotel.distance} km</span>
                                         </span>
                                     </div>
                                 </div>
@@ -72,32 +62,32 @@ export default function HotelItem({ hotelId }) {
                             <div className={classes.ratingWrapper}>
                                 <div>
                                     <span className={classes.hotelRating}>
-                                        <span className={classes.hotelRating__number}>4.9</span>
+                                        <span className={classes.hotelRating__number}>{hotel.rating}</span>
                                         <span className={classes.hotelRating__icon}>
                                             <StarIcon fontSize='small' />
                                         </span>
                                     </span>
-                                    <span className={classes.hotelRating__totalRating}>(445 Ratings)</span>
+                                    <span className={classes.hotelRating__totalRating}>({hotel.total_rating} Ratings)</span>
                                     <span className={classes.hotelRating__dot}>.</span>
-                                    <span className={classes.hotelRating__summary}>Fabulous</span>
+                                    <span className={classes.hotelRating__summary}>{hotel.summary}</span>
                                 </div>
                             </div>
                             <div className={classes.amenityWrapper}>
                                 <div className={classes.amenity}>
                                     <span className={classes.amenity__icon}>{amenitiesIconMapping.fontAwesome.wifi}</span>
-                                    <span className={classes.amenity__text}>Free Wifi</span>
+                                    <span className={classes.amenity__text}>{hotel.amenities[0]}</span>
                                 </div>
                                 <div className={classes.amenity}>
                                     <span className={classes.amenity__icon}>{amenitiesIconMapping.fontAwesome.power}</span>
-                                    <span className={classes.amenity__text}>Power backup</span>
+                                    <span className={classes.amenity__text}>{hotel.amenities[1]}</span>
                                 </div>
                                 <div className={classes.amenity}>
                                     <span className={classes.amenity__icon}>{amenitiesIconMapping.fontAwesome.tv}</span>
-                                    <span className={classes.amenity__text}>TV</span>
+                                    <span className={classes.amenity__text}>{hotel.amenities[2]}</span>
                                 </div>
                                 <div className={classes.amenity}>
                                     <span className={classes.amenity__text}>
-                                        <span>+ 9 more</span>
+                                        <span>+ {hotel.amenities.length - 3} more</span>
                                     </span>
                                 </div>
                             </div>
